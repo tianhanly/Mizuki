@@ -51,7 +51,7 @@ export const siteConfig: SiteConfig = {
 	// 顶栏标题配置
 	navbarTitle: {
 		// 显示模式："text-icon" 显示图标+文本，"logo" 仅显示Logo
-		mode: "box",
+		mode: "logo",
 		// 顶栏标题文本
 		text: "Catnap",
 		// 顶栏标题图标路径，默认使用 public/assets/home/home.png
@@ -552,10 +552,21 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 
 	// 侧栏组件布局配置
 	components: {
-		left: ["profile", "announcement", "categories", "tags"],
-		right: ["site-stats", "calendar"],
-		drawer: ["profile", "announcement"],
-	},
+    left: [
+        { type: "profile", position: "top" },
+        { type: "announcement", position: "top" },
+        { type: "categories", position: "sticky" },
+        { type: "tags", position: "top" },
+    ],
+    right: [
+        { type: "site-stats", position: "top" },
+        { type: "calendar", position: "top" },
+    ],
+    drawer: [
+        { type: "profile", position: "top" },
+        { type: "announcement", position: "top" },
+    ],
+},
 
 	// 默认动画配置
 	defaultAnimation: {
@@ -578,6 +589,11 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 桌面端断点：屏幕宽度大于等于1280px
 			desktop: 1280,
 		},
+	    layout: {
+        mobile: "drawer",    // 移动端布局：drawer（抽屉）或 bottom（底部）
+        tablet: "sidebar",   // 平板端布局：sidebar（侧边栏）
+        desktop: "sidebar",  // 桌面端布局：sidebar（侧边栏）
+        },
 	},
 };
 
