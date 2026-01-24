@@ -219,10 +219,10 @@ export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 			"/assets/desktop-banner/6.webp",
 		], // 桌面横幅图片
 		mobile: [
-			"/assets/mobile-banner/1.webp"，
+			"/assets/mobile-banner/1.webp",
 			"/assets/mobile-banner/2.webp",
 			"/assets/mobile-banner/3.webp",
-			"/assets/mobile-banner/4.webp"，
+			"/assets/mobile-banner/4.webp",
 			"/assets/mobile-banner/5.webp",
 			"/assets/mobile-banner/6.webp",
 		], // 移动横幅图片
@@ -278,7 +278,7 @@ export const navBarConfig: NavBarConfig = {
 					icon: "material-symbols:movie",
 				},
 				{
-					name: "Diary"，
+					name: "Diary",
 					url: "/diary/",
 					icon: "material-symbols:book",
 				},
@@ -302,9 +302,9 @@ export const navBarConfig: NavBarConfig = {
 			children: [
 				{
 					name: "About",
-					url: "/about/"，
+					url: "/about/",
 					icon: "material-symbols:person",
-				}，
+				},
 				{
 					name: "Friends",
 					url: "/friends/",
