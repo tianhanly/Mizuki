@@ -19,34 +19,34 @@ import { LinkPreset } from "./types/config";
 // 移除i18n导入以避免循环依赖
 
 // 定义站点语言
-const SITE_LANG = "zn_CN"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
+const SITE_LANG = "zn_CN"; // 语言代码,例如：'en', 'zh_CN', 'ja' 等。
 const SITE_TIMEZONE = 8; //设置你的网站时区 from -12 to 12 default in UTC+8
 export const siteConfig: SiteConfig = {
 	title: "Catnap",
 	subtitle: "nyimu 的小窝",
-	siteURL: "https://blog.nyimu.shop/", // 请替换为你的站点URL，以斜杠结尾
-	siteStartDate: "2026-01-17", // 站点开始运行日期，用于站点统计组件计算运行天数
+	siteURL: "https://blog.nyimu.shop/"， // 请替换为你的站点URL，以斜杠结尾
+	siteStartDate: "2026-01-17"， // 站点开始运行日期，用于站点统计组件计算运行天数
 
 	timeZone: SITE_TIMEZONE,
 
 	lang: SITE_LANG,
 
 	themeColor: {
-		hue: 250, // 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
-		fixed: false, // 对访问者隐藏主题色选择器
-	},
+		hue: 250,  // 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
+		fixed: false,// 对访问者隐藏主题色选择器
+	}，
 
-	// 特色页面开关配置(关闭不在使用的页面有助于提升SEO,关闭后直接在顶部导航删除对应的页面就行)
+	// 特色页面开关配置(关闭不在使用的页面有助于提升SEO，关闭后直接在顶部导航删除对应的页面就行)
 	featurePages: {
-		anime: true, // 番剧页面开关
-		diary: true, // 日记页面开关
+		anime: true,// 番剧页面开关
+		diary: true,// 日记页面开关
 		friends: true, // 友链页面开关
 		projects: true, // 项目页面开关
 		skills: true, // 技能页面开关
 		timeline: true, // 时间线页面开关
-		albums: true, // 相册页面开关
+		albums: true,// 相册页面开关
 		devices: true, // 设备页面开关
-	},
+	}，
 
 	// 顶栏标题配置
 	navbarTitle: {
@@ -63,7 +63,7 @@ export const siteConfig: SiteConfig = {
 	bangumi: {
 		userId: "your-bangumi-id", // 在此处设置你的Bangumi用户ID，可以设置为 "sai" 测试
 		fetchOnDev: false, // 是否在开发环境下获取 Bangumi 数据（默认 false），获取前先执行 pnpm build 构建 json 文件
-	},
+	}，
 
 	anime: {
 		mode: "local", // 番剧页面模式："bangumi" 使用Bangumi API，"local" 使用本地配置
@@ -86,7 +86,7 @@ export const siteConfig: SiteConfig = {
 
 	// 壁纸模式配置
 	wallpaperMode: {
-		// 默认壁纸模式：banner=顶部横幅，fullscreen=全屏壁纸，none=无壁纸
+		// 默认壁纸模式：banner=顶部横幅,fullscreen=全屏壁纸,none=无壁纸
 		defaultMode: "banner",
 		// 整体布局方案切换按钮显示设置（默认："desktop"）
 		// "off" = 不显示
@@ -97,7 +97,7 @@ export const siteConfig: SiteConfig = {
 	},
 
 	banner: {
-		// 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播
+		// 支持单张图片或图片数组,当数组长度 > 1 时自动启用轮播
 		src: {
 			desktop: [
 				"/assets/desktop-banner/1.webp",
@@ -117,7 +117,7 @@ export const siteConfig: SiteConfig = {
 			], // 移动横幅图片
 		}, // 使用本地横幅图片
 
-		position: "center", // 等同于 object-position，仅支持 'top', 'center', 'bottom'。默认为 'center'
+		position: "center", // 等同于 object-position,仅支持 'top', 'center', 'bottom'。默认为 'center'
 
 		carousel: {
 			enable: true, // 为 true 时：为多张图片启用轮播。为 false 时：从数组中随机显示一张图片
@@ -133,7 +133,7 @@ export const siteConfig: SiteConfig = {
 		// PicFlow API支持(智能图片API)
 		imageApi: {
 			enable: true, // 启用图片API
-			url: "http://domain.com/api_v2.php?format=text&count=4", // API地址，返回每行一个图片链接的文本
+			url: "http://domain.com/api_v2.php?format=text&count=4"， // API地址,返回每行一个图片链接的文本
 		},
 		// 这里需要使用PicFlow API的Text返回类型,所以我们需要format=text参数
 		// 项目地址:https://github.com/matsuzaka-yuki/PicFlow-API
@@ -166,23 +166,23 @@ export const siteConfig: SiteConfig = {
 		},
 
 		navbar: {
-			transparentMode: "semifull", // 导航栏透明模式："semi" 半透明加圆角，"full" 完全透明，"semifull" 动态透明
+			transparentMode: "semifull", // 导航栏透明模式："semi" 半透明加圆角,"full" 完全透明,"semifull" 动态透明
 		},
 	},
 	toc: {
-		enable: true, // 启用目录功能
-		mode: "sidebar", // 目录显示模式："float" 悬浮按钮模式，"sidebar" 侧边栏模式
-		depth: 2, // 目录深度，1-6，1 表示只显示 h1 标题，2 表示显示 h1 和 h2 标题，依此类推
-		useJapaneseBadge: true, // 使用日语假名标记（あいうえお...）代替数字，开启后会将 1、2、3... 改为 あ、い、う...
+		enable: true， // 启用目录功能
+		mode: "sidebar", // 目录显示模式："float" 悬浮按钮模式,"sidebar" 侧边栏模式
+		depth: 2, // 目录深度,1-6,1 表示只显示 h1 标题,2 表示显示 h1 和 h2 标题,依此类推
+		useJapaneseBadge: true, // 使用日语假名标记（あいうえお...）代替数字,开启后会将 1、2、3... 改为 あ、い、う...
 	},
 	showCoverInContent: true, // 在文章内容页显示文章封面
-	generateOgImages: false, // 启用生成OpenGraph图片功能,注意开启后要渲染很长时间，不建议本地调试的时候开启
+	generateOgImages: false, // 启用生成OpenGraph图片功能,注意开启后要渲染很长时间,不建议本地调试的时候开启
 	favicon: [
 		// 留空以使用默认 favicon
 		// {
 		//   src: '/favicon/icon.png',    // 图标文件路径
-		//   theme: 'light',              // 可选，指定主题 'light' | 'dark'
-		//   sizes: '32x32',              // 可选，图标大小
+		//   theme: 'light',              // 可选,指定主题 'light' | 'dark'
+		//   sizes: '32x32',              // 可选,图标大小
 		// }
 	],
 
@@ -195,15 +195,15 @@ export const siteConfig: SiteConfig = {
 			// 指定为英文字体则无论字体包含多大范围，都只会保留 ASCII 字符子集
 			fontFamily: "ZenMaruGothic-Medium",
 			fontWeight: "400",
-			localFonts: ["ZenMaruGothic-Medium.ttf"],
-			enableCompress: true, // 启用字体子集优化，减少字体文件大小
+			localFonts: ["ZenMaruGothic-Medium.ttf"]，
+			enableCompress: true, // 启用字体子集优化,减少字体文件大小
 		},
 		cjkFont: {
 			// 中日韩字体 - 作为回退字体
 			fontFamily: "萝莉体 第二版",
 			fontWeight: "500",
 			localFonts: ["萝莉体 第二版.ttf"],
-			enableCompress: true, // 启用字体子集优化，减少字体文件大小
+			enableCompress: true, // 启用字体子集优化,减少字体文件大小
 		},
 	},
 	showLastModified: true, // 控制“上次编辑”卡片显示的开关
@@ -211,28 +211,28 @@ export const siteConfig: SiteConfig = {
 export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 	src: {
 		desktop: [
-			"/assets/desktop-banner/1.webp",
+			"/assets/desktop-banner/1.webp"，
 			"/assets/desktop-banner/2.webp",
 			"/assets/desktop-banner/3.webp",
 			"/assets/desktop-banner/4.webp",
 			"/assets/desktop-banner/5.webp",
-			"/assets/desktop-banner/6.webp",
+			"/assets/desktop-banner/6.webp"，
 		], // 桌面横幅图片
 		mobile: [
-			"/assets/mobile-banner/1.webp"，
+			"/assets/mobile-banner/1.webp",
 			"/assets/mobile-banner/2.webp",
 			"/assets/mobile-banner/3.webp",
-			"/assets/mobile-banner/4.webp"，
+			"/assets/mobile-banner/4.webp",
 			"/assets/mobile-banner/5.webp",
 			"/assets/mobile-banner/6.webp",
 		], // 移动横幅图片
-	}, // 使用本地横幅图片
-	position: "center", // 壁纸位置，等同于 object-position
+	}， // 使用本地横幅图片
+	position: "center"， // 壁纸位置,等同于 object-position
 	carousel: {
-		enable: true, // 启用轮播
+		enable: true， // 启用轮播
 		interval: 5, // 轮播间隔时间（秒）
 	},
-	zIndex: -1, // 层级，确保壁纸在背景层
+	zIndex: -1, // 层级,确保壁纸在背景层
 	opacity: 0.8, // 壁纸透明度
 	blur: 1, // 背景模糊程度
 };
@@ -241,24 +241,24 @@ export const navBarConfig: NavBarConfig = {
 	links: [
 		LinkPreset.Home,
 		LinkPreset.Archive,
-		// 支持自定义导航栏链接,并且支持多级菜单,3.1版本新加
+		// 支持自定义导航栏链接，并且支持多级菜单，3.1版本新加
 		{
 			name: "Links",
 			url: "/links/",
 			icon: "material-symbols:link",
 			children: [
 				{
-					name: "GitHub",
+					name: "GitHub"，
 					url: "https://github.com/matsuzaka-yuki/Mizuki",
 					external: true,
-					icon: "fa6-brands:github",
-				},
+					icon: "fa6-brands:github"，
+				}，
 				{
-					name: "Bilibili",
+					name: "Bilibili"，
 					url: "https://space.bilibili.com/502912240",
-					external: true,
+					external: true，
 					icon: "fa6-brands:bilibili",
-				},
+				}，
 				{
 					name: "Gitee",
 					url: "https://gitee.com/matsuzakayuki/Mizuki",
@@ -274,16 +274,16 @@ export const navBarConfig: NavBarConfig = {
 			children: [
 				{
 					name: "Anime",
-					url: "/anime/",
+					url: "/anime/"，
 					icon: "material-symbols:movie",
 				},
 				{
 					name: "Diary"，
-					url: "/diary/",
+					url: "/diary/"，
 					icon: "material-symbols:book",
 				},
 				{
-					name: "Albums",
+					name: "Albums"，
 					url: "/albums/",
 					icon: "material-symbols:photo-library",
 				},
@@ -293,16 +293,16 @@ export const navBarConfig: NavBarConfig = {
 					icon: "material-symbols:devices",
 					external: false,
 				},
-			],
-		},
+			
+		}，
 		{
 			name: "About",
 			url: "/content/",
 			icon: "material-symbols:info",
 			children: [
 				{
-					name: "About",
-					url: "/about/"，
+					name: "About"，
+					url: "/about/",
 					icon: "material-symbols:person",
 				}，
 				{
@@ -320,12 +320,12 @@ export const navBarConfig: NavBarConfig = {
 				{
 					name: "Projects",
 					url: "/projects/",
-					icon: "material-symbols:work",
+					icon: "material-symbols:work"，
 				},
 				{
 					name: "Skills",
 					url: "/skills/",
-					icon: "material-symbols:psychology",
+					icon: "material-symbols:psychology"，
 				},
 				{
 					name: "Timeline",
@@ -338,7 +338,7 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "assets/images/avatar.webp", // 相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录
+	avatar: "assets/images/avatar.webp", // 相对于 /src 目录。如果以 '/' 开头,则相对于 /public 目录
 	name: "xiaowu",
 	bio: "邦邦梆梆",
 	typewriter: {
@@ -348,14 +348,14 @@ export const profileConfig: ProfileConfig = {
 	links: [
 		{
 			name: "Bilibli",
-			icon: "fa6-brands:bilibili",
+			icon: "fa6-brands:bilibili"，
 			url: "https://space.bilibili.com/502912240",
 		},
 		{
 			name: "Gitee",
 			icon: "mdi:git",
 			url: "https://gitee.com/matsuzakayuki",
-		},
+		}，
 		{
 			name: "GitHub",
 			icon: "fa6-brands:github",
@@ -382,7 +382,7 @@ export const licenseConfig: LicenseConfig = {
 
 // Permalink 固定链接配置
 export const permalinkConfig: PermalinkConfig = {
-	enable: false, // 是否启用全局 permalink 功能，关闭时使用默认的文件名作为链接
+	enable: false， // 是否启用全局 permalink 功能,关闭时使用默认的文件名作为链接
 	/**
 	 * permalink 格式模板
 	 * 支持的占位符：
@@ -392,7 +392,7 @@ export const permalinkConfig: PermalinkConfig = {
 	 * - %hour% : 2位小时 (00-23)
 	 * - %minute% : 2位分钟 (00-59)
 	 * - %second% : 2位秒数 (00-59)
-	 * - %post_id% : 文章序号（按发布时间升序排列，最早的文章为1）
+	 * - %post_id% : 文章序号（按发布时间升序排列,最早的文章为1）
 	 * - %postname% : 文章文件名（slug）
 	 * - %category% : 分类名（无分类时为 "uncategorized"）
 	 *
@@ -401,21 +401,21 @@ export const permalinkConfig: PermalinkConfig = {
 	 * - "%post_id%-%postname%" => "/42-my-post/"
 	 * - "%category%-%postname%" => "/tech-my-post/"
 	 *
-	 * 注意：不支持斜杠 "/"，所有生成的链接都在根目录下
+	 * 注意：不支持斜杠 "/",所有生成的链接都在根目录下
 	 */
 	format: "%postname%", // 默认使用文件名
 };
 
 export const expressiveCodeConfig: ExpressiveCodeConfig = {
-	// 注意：某些样式（如背景颜色）已被覆盖，请参阅 astro.config.mjs 文件。
-	// 请选择深色主题，因为此博客主题目前仅支持深色背景
+	// 注意：某些样式（如背景颜色）已被覆盖,请参阅 astro.config.mjs 文件。
+	// 请选择深色主题,因为此博客主题目前仅支持深色背景
 	theme: "github-dark",
 	// 是否在主题切换时隐藏代码块以避免卡顿问题
 	hideDuringThemeTransition: true,
 };
 
 export const commentConfig: CommentConfig = {
-	enable: false, // 启用评论功能。当设置为 false 时，评论组件将不会显示在文章区域。
+	enable: false, // 启用评论功能。当设置为 false 时,评论组件将不会显示在文章区域。
 	twikoo: {
 		envId: "https://twikoo.vercel.app",
 		lang: SITE_LANG,
@@ -431,7 +431,7 @@ export const announcementConfig: AnnouncementConfig = {
 	content: "Welcome to my blog! This is a sample announcement.", // 公告内容
 	closable: true, // 允许用户关闭公告
 	link: {
-		enable: true, // 启用链接
+		enable: true， // 启用链接
 		text: "Learn More", // 链接文本
 		url: "/about/", // 链接 URL
 		external: false, // 内部链接
@@ -440,7 +440,7 @@ export const announcementConfig: AnnouncementConfig = {
 
 export const musicPlayerConfig: MusicPlayerConfig = {
 	enable: true, // 启用音乐播放器功能
-	mode: "meting", // 音乐播放器模式，可选 "local" 或 "meting"
+	mode: "meting", // 音乐播放器模式,可选 "local" 或 "meting"
 	meting_api:
 		"https://www.bilibili.uno/api?server=:server&type=:type&id=:id&auth=:auth&r=:r", // Meting API 地址
 	id: "14164869977", // 歌单ID
@@ -450,9 +450,9 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 
 export const footerConfig: FooterConfig = {
 	enable: false, // 是否启用Footer HTML注入功能
-	customHtml: "", // HTML格式的自定义页脚信息，例如备案号等，默认留空
+	customHtml: "", // HTML格式的自定义页脚信息,例如备案号等,默认留空
 	// 也可以直接编辑 FooterConfig.html 文件来添加备案号等自定义内容
-	// 注意：若 customHtml 不为空，则使用 customHtml 中的内容；若 customHtml 留空，则使用 FooterConfig.html 文件中的内容
+	// 注意：若 customHtml 不为空,则使用 customHtml 中的内容；若 customHtml 留空,则使用 FooterConfig.html 文件中的内容
 	// FooterConfig.html 可能会在未来的某个版本弃用
 };
 
@@ -478,9 +478,9 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			position: "top",
 			// 所在侧边栏
 			sidebar: "left",
-			// CSS 类名，用于应用样式和动画
+			// CSS 类名,用于应用样式和动画
 			class: "onload-animation",
-			// 动画延迟时间（毫秒），用于错开动画效果
+			// 动画延迟时间（毫秒）,用于错开动画效果
 			animationDelay: 0,
 		},
 		{
@@ -506,7 +506,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			enable: true,
 			// 组件显示顺序
 			order: 3,
-			// 组件位置："sticky" 表示粘性定位，可滚动
+			// 组件位置："sticky" 表示粘性定位,可滚动
 			position: "sticky",
 			// 所在侧边栏
 			sidebar: "left",
@@ -538,7 +538,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 响应式配置
 			responsive: {
 				// 折叠阈值：当标签数量超过20个时自动折叠
-				collapseThreshold: 20,
+				collapseThreshold: 20，
 			},
 		},
 		{
@@ -549,7 +549,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 组件显示顺序
 			order: 5,
 			// 组件位置
-			position: "top",
+			position: "top"，
 			// 所在侧边栏
 			sidebar: "right",
 			// CSS 类名
@@ -563,7 +563,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 是否启用该组件
 			enable: true,
 			// 组件显示顺序
-			order: 6,
+			order: 6，
 			// 组件位置
 			position: "top",
 			// 所在侧边栏
@@ -581,7 +581,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 		enable: true,
 		// 基础延迟时间（毫秒）
 		baseDelay: 0,
-		// 递增延迟时间（毫秒），每个组件依次增加的延迟
+		// 递增延迟时间（毫秒）,每个组件依次增加的延迟
 		increment: 50,
 	},
 
@@ -600,21 +600,21 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 		//hidden:不显示侧边栏(桌面端)   drawer:抽屉模式(移动端不显示)   sidebar:显示侧边栏
 		layout: {
 			// 移动端：抽屉模式
-			mobile: "sidebar",
+			mobile: "sidebar"，
 			// 平板端：显示侧边栏
 			tablet: "sidebar",
 			// 桌面端：显示侧边栏
 			desktop: "sidebar",
-		},
-	},
+		}，
+	}，
 };
 
 export const sakuraConfig: SakuraConfig = {
 	enable: false, // 默认关闭樱花特效
 	sakuraNum: 21, // 樱花数量
-	limitTimes: -1, // 樱花越界限制次数，-1为无限循环
+	limitTimes: -1, // 樱花越界限制次数,-1为无限循环
 	size: {
-		min: 0.5, // 樱花最小尺寸倍数
+		min: 0.5， // 樱花最小尺寸倍数
 		max: 1.1, // 樱花最大尺寸倍数
 	},
 	opacity: {
@@ -627,13 +627,13 @@ export const sakuraConfig: SakuraConfig = {
 			max: -1.2, // 水平移动速度最大值
 		},
 		vertical: {
-			min: 1.5, // 垂直移动速度最小值
+			min: 1.5， // 垂直移动速度最小值
 			max: 2.2, // 垂直移动速度最大值
 		},
 		rotation: 0.03, // 旋转速度
-		fadeSpeed: 0.03, // 消失速度，不应大于最小不透明度
-	},
-	zIndex: 100, // 层级，确保樱花在合适的层级显示
+		fadeSpeed: 0.03， // 消失速度,不应大于最小不透明度
+	}，
+	zIndex: 100， // 层级,确保樱花在合适的层级显示
 };
 
 // Pio 看板娘配置
@@ -641,7 +641,7 @@ export const pioConfig: import("./types/config").PioConfig = {
 	enable: true, // 启用看板娘
 	models: ["/pio/models/pio/model.json"], // 默认模型路径
 	position: "left", // 默认位置在右侧
-	width: 280, // 默认宽度
+	width: 280， // 默认宽度
 	height: 250, // 默认高度
 	mode: "draggable", // 默认为可拖拽模式
 	hiddenOnMobile: true, // 默认在移动设备上隐藏
@@ -662,7 +662,7 @@ export const pioConfig: import("./types/config").PioConfig = {
 
 // 导出所有配置的统一接口
 export const widgetConfigs = {
-	profile: profileConfig,
+	profile: profileConfig，
 	announcement: announcementConfig,
 	music: musicPlayerConfig,
 	layout: sidebarLayoutConfig,
@@ -674,7 +674,7 @@ export const widgetConfigs = {
 
 export const umamiConfig = {
 	enabled: false, // 是否显示Umami统计
-	apiKey: import.meta.env.UMAMI_API_KEY || "api_xxxxxxxx", // API密钥优先从环境变量读取，否则使用配置文件中的值
+	apiKey: import.meta.env.UMAMI_API_KEY || "api_xxxxxxxx", // API密钥优先从环境变量读取,否则使用配置文件中的值
 	baseUrl: "https://api.umami.is", // Umami Cloud API地址
 	scripts: `
 <script defer src="XXXX.XXX" data-website-id="ABCD1234"></script>
