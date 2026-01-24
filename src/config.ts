@@ -19,7 +19,7 @@ import { LinkPreset } from "./types/config";
 // 移除i18n导入以避免循环依赖
 
 // 定义站点语言
-const SITE_LANG = "zn_CN"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
+const SITE_LANG = "zh_CN"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
 const SITE_TIMEZONE = 8; //设置你的网站时区 from -12 to 12 default in UTC+8
 export const siteConfig: SiteConfig = {
 	title: "Catnap",
@@ -73,7 +73,7 @@ export const siteConfig: SiteConfig = {
 	postListLayout: {
 		// 默认布局模式："list" 列表模式（单列布局），"grid" 网格模式（双列布局）
 		// 注意：如果侧边栏配置启用了"both"双侧边栏，则无法使用文章列表"grid"网格（双列）布局
-		defaultMode: "grid",
+		defaultMode: "list",
 		// 是否允许用户切换布局
 		allowSwitch: true,
 	},
@@ -99,22 +99,22 @@ export const siteConfig: SiteConfig = {
 	banner: {
 		// 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播
 		src: {
-			desktop: [
+			desktop: {
 				"/assets/desktop-banner/1.webp",
 				"/assets/desktop-banner/2.webp",
 				"/assets/desktop-banner/3.webp",
 				"/assets/desktop-banner/4.webp",
 				"/assets/desktop-banner/5.webp",
 				"/assets/desktop-banner/6.webp",
-			], // 桌面横幅图片
-			mobile: [
+			}, // 桌面横幅图片
+			mobile: {
 				"/assets/mobile-banner/1.webp",
 				"/assets/mobile-banner/2.webp",
 				"/assets/mobile-banner/3.webp",
 				"/assets/mobile-banner/4.webp",
 				"/assets/mobile-banner/5.webp",
 				"/assets/mobile-banner/6.webp",
-			], // 移动横幅图片
+			}, // 移动横幅图片
 		}, // 使用本地横幅图片
 
 		position: "center", // 等同于 object-position，仅支持 'top', 'center', 'bottom'。默认为 'center'
@@ -206,26 +206,26 @@ export const siteConfig: SiteConfig = {
 			enableCompress: true, // 启用字体子集优化，减少字体文件大小
 		},
 	},
-	showLastModified: true, // 控制“上次编辑”卡片显示的开关
+	showLastModified: true, // 控制"上次编辑"卡片显示的开关
 };
 export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 	src: {
-		desktop: [
+		desktop: {
 			"/assets/desktop-banner/1.webp",
 			"/assets/desktop-banner/2.webp",
 			"/assets/desktop-banner/3.webp",
 			"/assets/desktop-banner/4.webp",
 			"/assets/desktop-banner/5.webp",
 			"/assets/desktop-banner/6.webp",
-		], // 桌面横幅图片
-		mobile: [
-			"/assets/mobile-banner/1.webp"，
+		}, // 桌面横幅图片
+		mobile: {
+			"/assets/mobile-banner/1.webp",
 			"/assets/mobile-banner/2.webp",
 			"/assets/mobile-banner/3.webp",
-			"/assets/mobile-banner/4.webp"，
+			"/assets/mobile-banner/4.webp",
 			"/assets/mobile-banner/5.webp",
 			"/assets/mobile-banner/6.webp",
-		], // 移动横幅图片
+		}, // 移动横幅图片
 	}, // 使用本地横幅图片
 	position: "center", // 壁纸位置，等同于 object-position
 	carousel: {
@@ -238,7 +238,7 @@ export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 };
 
 export const navBarConfig: NavBarConfig = {
-	links: [
+	links: {
 		LinkPreset.Home,
 		LinkPreset.Archive,
 		// 支持自定义导航栏链接,并且支持多级菜单,3.1版本新加
@@ -246,7 +246,7 @@ export const navBarConfig: NavBarConfig = {
 			name: "Links",
 			url: "/links/",
 			icon: "material-symbols:link",
-			children: [
+			children: {
 				{
 					name: "GitHub",
 					url: "https://github.com/matsuzaka-yuki/Mizuki",
@@ -271,14 +271,14 @@ export const navBarConfig: NavBarConfig = {
 			name: "My",
 			url: "/content/",
 			icon: "material-symbols:person",
-			children: [
+			children: {
 				{
 					name: "Anime",
 					url: "/anime/",
 					icon: "material-symbols:movie",
 				},
 				{
-					name: "Diary"，
+					name: "Diary",
 					url: "/diary/",
 					icon: "material-symbols:book",
 				},
@@ -293,30 +293,30 @@ export const navBarConfig: NavBarConfig = {
 					icon: "material-symbols:devices",
 					external: false,
 				},
-			],
+			},
 		},
 		{
 			name: "About",
 			url: "/content/",
 			icon: "material-symbols:info",
-			children: [
+			children: {
 				{
 					name: "About",
-					url: "/about/"，
+					url: "/about/",
 					icon: "material-symbols:person",
-				}，
+				},
 				{
 					name: "Friends",
 					url: "/friends/",
 					icon: "material-symbols:group",
 				},
-			],
+			},
 		},
 		{
 			name: "Others",
 			url: "#",
 			icon: "material-symbols:more-horiz",
-			children: [
+			children: {
 				{
 					name: "Projects",
 					url: "/projects/",
@@ -332,9 +332,9 @@ export const navBarConfig: NavBarConfig = {
 					url: "/timeline/",
 					icon: "material-symbols:timeline",
 				},
-			],
+			},
 		},
-	],
+	},
 };
 
 export const profileConfig: ProfileConfig = {
@@ -345,7 +345,7 @@ export const profileConfig: ProfileConfig = {
 		enable: true, // 启用个人简介打字机效果
 		speed: 80, // 打字速度（毫秒）
 	},
-	links: [
+	links: {
 		{
 			name: "Bilibli",
 			icon: "fa6-brands:bilibili",
