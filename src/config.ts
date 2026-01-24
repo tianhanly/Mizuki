@@ -110,7 +110,7 @@ export const siteConfig: SiteConfig = {
 			mobile: [
 				"/assets/mobile-banner/1.webp",
 				"/assets/mobile-banner/2.webp",
-				"/assets/mobile-banner/3.webp"，
+				"/assets/mobile-banner/3.webp",
 				"/assets/mobile-banner/4.webp",
 				"/assets/mobile-banner/5.webp",
 				"/assets/mobile-banner/6.webp",
